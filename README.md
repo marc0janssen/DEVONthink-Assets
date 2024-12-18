@@ -33,7 +33,7 @@ This repository contains scripts and other assets for DEVONthink
 
 Zorg ervoor dat je DEVONthink 3 correct hebt ingesteld en dat je de juiste machtigingen hebt om scripts uit te voeren. Dit script is handig voor het creëren van gestructureerde notities in een Zettelkasten-systeem, wat ideaal is voor het organiseren van gedachten en ideeën.
 
-## Create Zettelkasten
+## Create Zettelkasten ENG
 
 **What the Script Does**
 
