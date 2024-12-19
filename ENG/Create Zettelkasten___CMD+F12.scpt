@@ -14,7 +14,9 @@ tell application "DEVONthink 3"
     
     -- Prompt the user for a filename
     set dateString to my formatDateFilename(currentDate)
-    set userFilename to text returned of (display dialog "Enter the filename:" default answer dateString & " - NewFile")
+    set zettelKastenId to text returned of (display dialog "Enter ZettelKastenID (e.g. 51.34.01-1a4):" default answer "00.00.00")
+    set titleZettelKasten to text returned of (display dialog "Enter the ZettelKasten title:" default answer "NewZettelKasten")
+    set userFilename to zettelKastenId & " - " & titleZettelKasten
 
     -- Create a new Markdown file with the specified filename
     set newFile to create record with {name:userFilename, type:markdown} in current group

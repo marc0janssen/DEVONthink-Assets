@@ -14,8 +14,10 @@ tell application "DEVONthink 3"
     
     -- Vraag de gebruiker om een bestandsnaam
     set datumString to my formatDateFilename(huidigeDatum)
-    set gebruikersBestandsnaam to text returned of (display dialog "Voer de bestandsnaam in:" default answer datumString & " - NieuweZettelkasten")
-
+    set zettelKastenId to text returned of (display dialog "Voer ZettelKastenID in (bijv. 51.34.01-1a4):" default answer "00.00.00")
+    set titelZettelKasten to text returned of (display dialog "Voer de ZettelKasten Titel in:" default answer "NieuwZettelKasten")
+    set gebruikersBestandsnaam to zettelKastenId & " - " & titelZettelKasten
+    
     -- Maak een nieuw Markdown-bestand met de opgegeven bestandsnaam
     set nieuwBestand to create record with {name:gebruikersBestandsnaam, type:markdown} in current group
 
